@@ -5,5 +5,4 @@ export interface IProduct {
     price: number;
     description: string;
     createdAt?: string | Date;
-    // details?: string;
 }
