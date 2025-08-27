@@ -9,8 +9,6 @@ import './addAndEditProduct.css';
 const AddAndEditProduct = ()=>{
     const selectedProduct = useAppSelector(state => state.selectedProduct);
     const dispatch = useAppDispatch();
-
-    console.log('selectedProduct: ', selectedProduct);
     
     const formik = useFormik({
         initialValues: {

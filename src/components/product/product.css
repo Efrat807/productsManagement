@@ -17,6 +17,10 @@
         height: auto;
         border-radius: 8px;
     }
+    .productInfo {
+        cursor: pointer;
+        width: 100%;
+    }
     .deleteBtn {
         background-color: #d56a1e;
         padding: 8px 16px;

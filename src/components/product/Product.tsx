@@ -12,13 +12,20 @@ const Product = ({product}: {product: IProduct}) => {
 
     return(<div>
         {product ? (
-            <div className="productCard" onClick={() => dispatch(setSelectedProduct(product))} style={{cursor: 'pointer', backgroundColor: color}}>
+            <div className="productCard"  style={{backgroundColor: color}}>
                 <img className="img" src={defaultImage} alt={product.name} />
-                <div className="productInfo">
+                <div className="productInfo" onClick={() => dispatch(setSelectedProduct(product))}>
                     <h3 className="productName">{product.name}</h3>
                     <p className="description">{product.description}</p>
                 </div>
-                <button className="deleteBtn" onClick={() => dispatch(deleteProduct(product.id!))}>Delete</button>
+                <button className="deleteBtn" 
+                onClick={() => {
+                    if (product.id === selectedProduct?.id) {
+                        dispatch(setSelectedProduct(null));
+                    }
+                    dispatch(deleteProduct(product.id!))
+                    
+                }}>Delete</button>
                 
             </div>
         ) : (

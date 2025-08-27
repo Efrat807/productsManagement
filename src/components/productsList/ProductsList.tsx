@@ -1,9 +1,9 @@
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import AddAndEditProduct from "../addAndEditProduct/AddAndEditProduct";
 import Product from "../product/Product";
-import { resetSelectedProduct } from "../../features/selectedProduct/selectedProductSlice";
+import { setSelectedProduct } from "../../features/selectedProduct/selectedProductSlice";
 import './ProductsList.css'
-import { use, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 const ProductsList = () => {
     const products = useAppSelector(state => state.products);
@@ -37,7 +37,7 @@ const ProductsList = () => {
             <div className="productsContainer">
                 <div className="topBar">
                     <button className="addProductBtn" onClick={()=>{
-                        dispatch(resetSelectedProduct());
+                        dispatch(setSelectedProduct(null));
                         setShowDetails(true);
                     }}>+ Add</button>
                     <input 

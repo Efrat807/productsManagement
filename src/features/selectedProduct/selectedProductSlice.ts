@@ -6,8 +6,7 @@ import type { IProduct } from '../../types';
     initialState: null as IProduct | null,
     reducers: {
         setSelectedProduct: (_, action: PayloadAction<IProduct | null>) => action.payload,
-        resetSelectedProduct: () => null,
     }
 });
-    export const { setSelectedProduct, resetSelectedProduct } = selectedProductSlice.actions;
+    export const { setSelectedProduct } = selectedProductSlice.actions;
     export default selectedProductSlice.reducer;
