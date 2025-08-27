@@ -1,0 +1,31 @@
+
+
+.productCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    max-width: 1800px;
+    width: 600px;
+    height: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+
+    .img {
+        width: 100px;
+        height: auto;
+        border-radius: 8px;
+    }
+    .deleteBtn {
+        background-color: #d56a1e;
+        padding: 8px 16px;
+        cursor: pointer;
+        align-self: center;
+        margin-left: auto;
+
+        &:hover {
+            background-color: #ff7875;
+        }
+    }
+}
