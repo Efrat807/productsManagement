@@ -32,7 +32,7 @@ const productsSlice = createSlice({
     reducers: {
         addProduct: (state: IProduct[], action: { payload: IProduct }) => {
             const id = state.length > 0 ? state[state.length - 1].id! + 1 : 1;
-            state.push({ ...action.payload, id, createdAt: new Date() });
+            state.push({ ...action.payload, id, createdAt: new Date().toISOString() });
         },
         deleteProduct: (state: IProduct[], action: { payload: number }) => {
             return state.filter(product => product.id !== action.payload);
