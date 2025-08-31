@@ -7,6 +7,7 @@ https://github.com/Efrat807/productsManagement
 
 # run:  
 ```  
+cd productsManagement-master  
 npm i  
 npm run dev  
 ```
